@@ -49,3 +49,5 @@ fruit = Fruit.new("color", "price", "weight")
 apple=Fruit.new(apple[:color], apple[:price], apple[:weight])
 
 p apple
+
+#this is a test comment 
