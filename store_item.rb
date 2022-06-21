@@ -44,7 +44,7 @@ apple = {color: "red", price:  1.00, weight:  "150g" }
 banana = {color:  "yellow", price:  0.50, weight: "150g"}
 orange = {color: "orange", price:  0.75, weight: "100g"}
 
-fruit = Fruit.new(color, price, weight)
+fruit = Fruit.new("color", "price", "weight")
 
 apple=Fruit.new(apple[:color], apple[:price], apple[:weight])
 
