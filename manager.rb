@@ -53,11 +53,16 @@ class Manager < Employee
     #oops through each of the manager’s employees and changes their active status to false.
     index = 0
     while index < @employees.length
-      @employees[index].active = @employees[index].active(false)
+      @employees[index].active = false
     end 
+  end 
 
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 manager.print_info
 manager.send_report
+manager.give_all_raises
+employee1.print_info
+employee2.print_info
+manager.fire_all_employees
