@@ -3,54 +3,31 @@
 class Fruit
   
   attr_reader :color, :price, :weight
-  
 
-  def initialize(color, price, weight)
+
+  def initialize(input_options)
     
-    @color = color
-    @price = price 
-    @weight = weight 
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @weight = input_options[:weight]
   end
-  
-  # def color
-  #   @color
-  # end 
-
-
-  # def price 
-  #   @price
-  # end 
-
-
-  # def weight=(weight_input)
-  #   @weight = weight_input
-  # end 
-
-  # def weight
-  #   @weight
-  # end 
-
 
   def print_info
-    puts "This fruit is #{@color}, it weighs #{@weight}, and it costs #{@price}"
+    puts "This fruit is #{color}, it weighs #{weight}, and it costs #{price}"
   end 
 
 end 
 
-apple = Fruit.new("red", "1.0", "150g")
+apple = Fruit.new({color: "red", price:  1.00, weight:  "150g" })
+banana = Fruit.new({color:  "yellow", price:  0.50, weight: "150g"})
+orange = Fruit.new ({color: "orange", price:  0.75, weight: "100g"})
+
 
 apple.print_info
 
-
-banana=Fruit.new("yellow", "0.50", "150g")
-
 banana.print_info
 
-orange=Fruit.new("orange", "0.75", "100g")
-
 orange.print_info
-
-
 
 
 
