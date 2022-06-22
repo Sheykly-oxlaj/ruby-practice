@@ -15,23 +15,37 @@ class Vehicle
   def turn(new_direction)
     @direction = new_direction
   end
+
 end 
 
 
 class Car < Vehicle
+
+  def initialize
+    super 
+    @make = "Honda"
+    @model = "Civic"
+    @year = "2020"
+  end 
+
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
 
-class Bike < Vehicle 
+class Bike < Vehicle
+  def initialize
+    super 
+    @type =  "Mountain Bike"
+    @weight = 25
+  end 
+
   def ring_bell
     puts "Ring ring!"
   end
+  
 end 
-
-
 
   bike = Bike.new
   car = Car.new
