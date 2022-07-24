@@ -1,5 +1,5 @@
-# 1. Read about the Ruby sort method. Then sort the following array of hashes by age. (Note - do not use the sort_by method for this exercise)
-people = [
+# # 1. Read about the Ruby sort method. Then sort the following array of hashes by age. (Note - do not use the sort_by method for this exercise)
+# people = [
   { "name" => "Saron", "age" => 34 },
   { "name" => "Majora", "age" => 28 },
   { "name" => "Danilo", "age" => 45 },
@@ -13,7 +13,6 @@ strings = %w(foo test blog a)
 p strings.sort { |a, b| a.length <=> b.length }
 # --> ["a", "foo", "test", "blog"]
 
-
 #The spaceship operator 
 a <=> b :=
   if a < b then return -1
@@ -23,14 +22,18 @@ a <=> b :=
 ##########################################################################################
 
 # # 2. Use the sort method to sort the array of hashes first by age, then by name.
-# people = [
-#   { name: "bob", age: 15, gender: "male" },
-#   { name: "alice", age: 25, gender: "female" },
-#   { name: "bob", age: 56, gender: "male" },
-#   { name: "dave", age: 45, gender: "male" },
-#   { name: "alice", age: 56, gender: "female" },
-#   { name: "adam", age: 15, gender: "male" },
-# ]
+people = [
+  { name: "bob", age: 15, gender: "male" },
+  { name: "alice", age: 25, gender: "female" },
+  { name: "bob", age: 56, gender: "male" },
+  { name: "dave", age: 45, gender: "male" },
+  { name: "alice", age: 56, gender: "female" },
+  { name: "adam", age: 15, gender: "male" },
+]
+people_sorted_by_age = people.sort { |person_1, person_2| person_1[:age] <=> person_2[:age] }
+people_sorted_by_name = people_sorted_by_age.sort { |person_1, person_2| person_1[:name] <=> person_2[:name] }
+
+pp people_sorted_by_name
 
 # # 3 Use the sort and map methods to convert the array of hashes into an array of titles sorted by their ratings highest to lowest.
 # movies = [
